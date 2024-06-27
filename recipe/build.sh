@@ -30,4 +30,8 @@ WITH_LAPACK_LIB="-L${PREFIX}/lib -llapack"
     --enable-gnu-packages
 
 make -j "${CPU_COUNT}"
+
+mkdir -p $PREFIX/include/CoinClp
+cp src/*.h* $PREFIX/include/CoinClp
+
 make install
